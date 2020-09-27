@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Registro</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+
+<!--===============================================================================================-->
+</head>
+<body>
+
+	<div class="contact1">
+		<div class="container-contact1">
+		<div class="back">
+			<div class="contact1-pic js-tilt" data-tilt>
+				<img src="images/veterinarian.png" alt="IMG" width="800px" height="300px" >
+
+
+
+			</div>
+</div>
+
+
+
+				<span class="contact1-form-title">
+					<h2>Veterinaria DOIC</h2>
+					<p>Un cuidado que se da con amor y esfuerzo</p>
+				</span>
+
+                 <br>
+				<div class="wrap-input1 validate-input">
+					<input class="input1" type="text" name="name" placeholder="Usuario" id="nombre"> </input>
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input">
+					<input class="input1" type="text" name="email" placeholder="Email" id="email"> </input>
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input">
+					<input class="input1" type="text" name="subject" placeholder="Contraseña" id="clave"> </input>
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input2 validate-input">
+					<input class="input2" type="file" name="subject" placeholder="Imagen" id="imgusuario">  </input>
+					<span class="shadow-input2"></span>
+				</div>
+
+
+				<div class="container-contact1-form-btn">
+           <button onclick="botonguardarclick()" class="contact1-form-btn"><span>
+              Registrarse
+              <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+            </span></button>
+
+					</button>
+				</div>
+
+		</div>
+	</div>
+<script type='text/javascript' src='Claseadministrador.js'></script>
+<script type="text/javascript">
+
+
+
+              function botonguardarclick()
+            {
+                let admactual = new _adm('0',
+        			document.getElementById("nombre").value,
+							document.getElementById("email").value,
+              document.getElementById("clave").value,
+
+
+        );
+        admactual.Guardar(admactual).then(function(response) {
+  console.log("Success!", response);
+            alert("Guardado con exito");
+						location.href='Login.html';
+
+}, function(error) {
+  console.error("Failed!", error);
+             alert("Error " + error);
+
+});
+
+            }
+
+        </script>
+
+	<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+</html>
